@@ -15,9 +15,9 @@ pipeline {
     //                cd Cat && docker build -t devopsmell/cat:JR10 .
     //                cd ../helloworld && docker build -t devopsmell/helloworld:JR10 .
     //                cd ../web-nginx && docker build -t devopsmell/mynginx:JR10 .
-    //                docker tag devopsmell/cat:JR10 willido/cat:latest
-    //                docker tag devopsmell/helloworld:JR10 willido/helloworld:latest
-    //                docker tag devopsmell/mynginx:JR10 willido/mynginx:latest
+    //                docker tag devopsmell/cat:JR10 devopsmell/cat:latest
+    //                docker tag devopsmell/helloworld:JR10 devopsmell/helloworld:latest
+    //                docker tag devopsmell/mynginx:JR10 devopsmell/mynginx:latest
     //                docker images
 	// 	        '''
     //         }
@@ -28,8 +28,8 @@ pipeline {
     //             withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'PSWD', usernameVariable: 'USER')]) {
     //                 sh """                        
     //                     docker login -u $USER -p $PSWD
-    //                     for img in devopsmell/cat:JR10 willido/cat:latest willido/helloworld:JR10 willido/helloworld:latest \
-    //                            devopsmell/mynginx:JR10 willido/mynginx:latest; \
+    //                     for img in devopsmell/cat:JR10 devopsmell/cat:latest devopsmell/helloworld:JR10 devopsmell/helloworld:latest \
+    //                            devopsmell/mynginx:JR10 devopsmell/mynginx:latest; \
     //                     do docker push \$img; done;
     //                 """
     //             }
